@@ -37,11 +37,17 @@ Or pass everything on one line (no prompts):
 
 ## Deploy to a new router
 
-1. Upload the generated `.rsc` file via **WinBox → Files**
-2. In **Terminal**, run:
+1. **Plug the router** into the school's switch (any port works — all ports are bridged)
+2. **Open WinBox** — the router appears in the neighbour list by its **MAC address**
+3. **Double-click** to connect (no IP needed)
+4. **Set admin username & password**
+5. **Upload** the generated `.rsc` file via **Files → Upload**
+6. Open **Terminal** and run:
 
 ```
 /import MySchool-mikrotik.rsc
 ```
 
-The router will apply the full config — bridge, DHCP pool, firewall, NAT, DNS — and be ready to go.
+The router applies the config — bridge, DHCP pool, DNS — and starts handing out IPs immediately.
+
+**Important:** The DNS server and gateway you enter must match the school network provided by the ISP. All ports are bridged so any port works for uplink or switches.

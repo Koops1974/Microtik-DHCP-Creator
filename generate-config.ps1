@@ -128,6 +128,10 @@ if ($staticLeases.Count -gt 0) {
     }
 }
 Write-Host ""
+Write-Host "Port connections:" -ForegroundColor Yellow
+Write-Host "  Any port can be used for any device (all ports are bridged)" -ForegroundColor White
+Write-Host "  WARNING: Disable DHCP on your main router or this will conflict!" -ForegroundColor Red
+Write-Host ""
 Write-Host "How to use:" -ForegroundColor Cyan
 Write-Host "  1. Upload $outputFile to the router via WinBox (Files)" -ForegroundColor White
 Write-Host "  2. In Terminal, run: /import ${safeName}-mikrotik.rsc" -ForegroundColor White
